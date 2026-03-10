@@ -55,11 +55,11 @@ export default function Footer() {
           animation: 'grid-drift 22s linear infinite',
         }} />
         {/* Radial glow blobs */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[280px] rounded-full blur-[130px]"
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[280px] rounded-full blur-[40px] sm:blur-[130px]"
           style={{ background: 'rgba(46,134,193,0.07)' }} />
-        <div className="absolute bottom-0 left-1/4 w-[420px] h-[180px] rounded-full blur-[100px]"
+        <div className="absolute bottom-0 left-1/4 w-[420px] h-[180px] rounded-full blur-[40px] sm:blur-[100px]"
           style={{ background: 'rgba(46,134,193,0.05)' }} />
-        <div className="absolute bottom-0 right-1/4 w-[340px] h-[160px] rounded-full blur-[90px]"
+        <div className="absolute bottom-0 right-1/4 w-[340px] h-[160px] rounded-full blur-[40px] sm:blur-[90px]"
           style={{ background: 'rgba(110,40,230,0.05)' }} />
       </div>
 

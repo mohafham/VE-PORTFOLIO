@@ -111,9 +111,9 @@ export default function ToolsSection() {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       {/* Ambient glows */}
-      <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/[0.07] blur-[120px] pointer-events-none" />
-      <div className="absolute -right-32 top-1/3 w-[420px] h-[420px] rounded-full bg-[#2E86C1]/[0.06] blur-[120px] pointer-events-none" />
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[600px] h-[300px] rounded-full bg-purple-900/[0.05] blur-[100px] pointer-events-none" />
+      <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/[0.07] blur-[40px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute -right-32 top-1/3 w-[420px] h-[420px] rounded-full bg-[#2E86C1]/[0.06] blur-[40px] sm:blur-[120px] pointer-events-none" />
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[600px] h-[300px] rounded-full bg-purple-900/[0.05] blur-[40px] sm:blur-[100px] pointer-events-none" />
 
       <section className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-20 max-w-[1440px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">

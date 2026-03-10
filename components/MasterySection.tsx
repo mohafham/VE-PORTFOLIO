@@ -152,7 +152,10 @@ export default function MasterySection() {
   const [itemDistance, setItemDistance] = useState(800);
 
   useEffect(() => {
-    const update = () => setItemDistance(window.innerHeight);
+    const update = () => {
+      const isMobile = window.innerWidth < 768;
+      setItemDistance(isMobile ? window.innerHeight * 0.55 : window.innerHeight);
+    };
     update();
     window.addEventListener('resize', update);
     return () => window.removeEventListener('resize', update);
@@ -165,8 +168,8 @@ export default function MasterySection() {
       <div className="absolute inset-0 mastery-grid-bg pointer-events-none" />
 
       {/* Neon ambient glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-blue-600/5 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-purple-600/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-blue-600/5 blur-[40px] sm:blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-purple-600/5 blur-[40px] sm:blur-[100px] pointer-events-none" />
 
       {/* Scan-line overlay */}
       <div className="absolute inset-0 mastery-scanlines pointer-events-none opacity-[0.025]" />

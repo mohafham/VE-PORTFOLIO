@@ -215,15 +215,17 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
   }, [updateCardTransforms]);
 
   const setupLenis = useCallback(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
     if (useWindowScroll) {
       const lenis = new Lenis({
-        lerp: 0.08,
+        lerp: isMobile ? 0.14 : 0.08,
         smoothWheel: true,
-        touchMultiplier: 2,
+        touchMultiplier: isMobile ? 1.2 : 2,
         infinite: false,
-        wheelMultiplier: 2.5,
-        syncTouch: true,
-        syncTouchLerp: 0.075
+        wheelMultiplier: isMobile ? 1.5 : 2.5,
+        syncTouch: !isMobile,
+        syncTouchLerp: 0.1
       });
 
       lenis.on('scroll', handleScroll);
@@ -243,14 +245,14 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       const lenis = new Lenis({
         wrapper: scroller,
         content: scroller.querySelector('.scroll-stack-inner') as HTMLElement,
-        lerp: 0.08,
+        lerp: isMobile ? 0.14 : 0.08,
         smoothWheel: true,
-        touchMultiplier: 2,
+        touchMultiplier: isMobile ? 1.2 : 2,
         infinite: false,
         gestureOrientation: 'vertical',
-        wheelMultiplier: 2.5,
-        syncTouch: true,
-        syncTouchLerp: 0.075
+        wheelMultiplier: isMobile ? 1.5 : 2.5,
+        syncTouch: !isMobile,
+        syncTouchLerp: 0.1
       });
 
       lenis.on('scroll', handleScroll);

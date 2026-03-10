@@ -28,7 +28,7 @@ const bungee = Bungee({
 })
 
 export const metadata: Metadata = {
-  title: 'Rajin | Elite Video Editor',
+  title: 'RaiJin | Video Editor',
   description: 'Elite Video Editor for Global Creators & Agencies. Crafting visual stories that command attention.',
 }
 

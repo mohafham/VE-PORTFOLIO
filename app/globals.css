@@ -129,3 +129,17 @@
 .scroll-stack-scroller::-webkit-scrollbar {
   display: none;
 }
+
+/* ── Mobile performance optimizations ── */
+@media (max-width: 767px) {
+  .mastery-grid-bg {
+    animation: none;
+  }
+  .mastery-scanlines {
+    display: none;
+  }
+  .scan-line {
+    animation: none;
+    display: none;
+  }
+}
